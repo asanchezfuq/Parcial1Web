@@ -7,11 +7,105 @@ HTML5 / JavaScript
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Window</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        
+        <script type="text/>javascript">
+            var SO = navigator.platform;
+            document.write("<h1>Documento abierto con:"+SO+"</h1>");
+        </script>
+        <script type="text/javascript">
+            var texto = prompt("Titulo nueva ventana:");
+            var ventanaNueva = window.open();
+            ventanaNueva.document.write("<h1>" + texto + "</h1>")
+        </script>
+        <script type="text/javascript">
+            document.write("<form name=\"cambiacolor\">");
+            document.write("<b>Color fondo:</b><br>");
+            document.write("<select name=\"color\">");
+            document.write("<option value =\"red\">Rojo</option>");
+            document.write("<option value =\"blue\">Azul</option>");
+            document.write("<option value =\"yellow\">Amarillo</option>");
+            document.write("<option value =\"green\">Verde</option>");
+            document.write("</select>")
+            document.write("<input type=\"button\"value\"Modifica el color\" onclick=\"document.bgColor=document.cambiacolor.color.value\">");
+            document.write("</form>");
+        </script>
+        <frameset cols="50%,50%">
+            <frame src="3.12a-Marcos1.html" name="Marco1" noresize >
+            <frame src="3.12b-Marcos2.html" name="Marco2" noresize >
+        </frameset>
+    <form>
+        <input type="Button" value="Cambia Color" onclick="campoColor = parent.Marco1.document.form1.color
+               if(campoColor.selectedIndex==0){
+                   colorin = 'green';
+               }else{
+                   
+                   colorin = 'blue';
+               }
+               campoFrame = parent.Marco1.document.form1.marcos
+               if(campoFrame.selectedIndex==0){
+                   window.parent.Marco1.document.bgColor = colorin
+               }else{
+                   window.parent.Marco2.document.bgColor = colorin
+               }">
+    </form>
+    <a href="enlace.html" target="_blank"
+       nuevaVentana = window.open()
+       nuevaVentana = window.open("hhtp://www.misitioweb.com/ads", Publicidad height=100, widht=100");}
+       <center><h1>Apariencia Ventana</h1>
+           <br>
+           <input type="Button" value ="Abre Ventana" onclick="myWindow1=window.open('','Nueva Ventana','widht=300, height=200');
+             myWindow1.document.write('<html>');
+             myWindow1.document.write('<head>');
+             myWindow1.document.write('<title>Ventana Prueba</title>');
+             myWindow1.document.write('</head>');
+             myWindow1.document.write('<body>');
+             myWindow1.document.write('se han utlizado propiedades:');
+             myWindow1.document.write('<li>height=200</li><li>width=300</li>');
+             myWindow1.document.write('</body>');
+             myWindow1.document.write('</html>');
+                "/>
+        </center>
+       <center><h1>Apertura de m&uacute;ltiples ventanas</h1>
+           <input type="Button" value="Abre m&uacute;ltiples ventanas..." onclick="
+                  for(i=0;i<5;i++){
+                      myWindow=window.open('','','width=200, height=200');
+                      myWindow.document.write('<html>');
+                      myWindow.document.write('<head>');
+                      myWindow.document.write('<title>Ventana:'+i+'</title>');
+                      myWindow.document.write('</head>');
+                      myWindow.document.write('<body>');
+                      myWindow.document.write('ventana'+i);
+                      myWindow.document.write('<input type=Button value=Cerrar onclick=window.close()>');
+                      myWindow.document.write('</body>');
+                      myWindow.document.write('</html>');
+                  }
+                                "/>
+           
+        </center>
+       <center><h1>Apariencia Ventanas</h1>
+           <br>
+           <input type="Button" value="Abre Ventana" onclick="myWindow1=window.open('', 'Nueva Ventana','top=0, left=0, width=400, height=400')
+                  myWindow1.document.write('<html>');
+                  myWindow1.document.write('<head>');
+                  myWindow1.document.write('<title> Ubicar Ventana</title>');
+                  myWindow1.document.write('top=0 <br> left=0 <br> width=400 <br> height=400')
+                  myWindow1.document.write('</body>');
+                  myWindow1.document.write('</html>');
+                     "/>
+        </center>
+    <script>
+        var ventanaSecundaria = window.open("", "ventanaSec", "width=500, height=500");
+    </script>
+    <center><h1>Comunicaci&oacute; n entre ventanas </h1>
+        <br>
+        <form name=formulario>
+            <input type=text name=url size=50 value="http://www.">
+            <input type=Button value="Mostrar url en Ventana secundaria" onclick="ventanaSecundaria.location =document.formulario.url.value;">
+        </form>
+    </center>
     </body>
-</html>
+    </html>
