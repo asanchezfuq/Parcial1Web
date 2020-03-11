@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+Andrés Felipe Sánchez Fuquen ID: 593664
+Programación Web NRC: 7478
+10 / 03 / 2020
+HTML5 / JavaScript
+-->
+<html>
+    <head>
+        <title>Diagonal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <p>Anchura:</p><input type="text" id="a" value="">
+        <p>Altura:</p><input type="text" id="b" value="">
+        
+        <button onclick="myFunction3()">Calcular Diagonal</button>
+
+        <p id="3"></p>
+
+        <script>
+            function myFunction3() {
+                var c = document.getElementById("a").value;
+                var d = document.getElementById("b").value;
+                var e = Math.pow(c, 2);
+                var f = Math.pow(d, 2);
+                var g = e+f;
+                document.getElementById("3").innerHTML = Math.sqrt(g);
+            }
+        </script>
+    </body>
+</html>

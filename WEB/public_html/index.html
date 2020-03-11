@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--
+Andrés Felipe Sánchez Fuquen ID: 593664
+Programación Web NRC: 7478
+10 / 03 / 2020
+HTML5 / JavaScript
+-->
+<html>
+    <head>
+        <title>Milisegundos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <button onclick="myFunction1()">Calcular</button>
+        
+        <p id="1"></p>
+
+        <script>
+            function myFunction1() {
+                var d = new Date("1/1/2000");
+                var n = d.getTime();
+                document.getElementById("1").innerHTML = n;
+            }
+        </script>
+    </body>
+</html>

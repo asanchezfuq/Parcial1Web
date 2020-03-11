@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+Andrés Felipe Sánchez Fuquen ID: 593664
+Programación Web NRC: 7478
+10 / 03 / 2020
+HTML5 / JavaScript
+-->
+<html>
+    <head>
+        <title>Cadena de Texto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <p>Escribe Algo:</p><input type="text" id="Text" value="">
+
+        <button onclick="myFunction2()">Probar</button>
+
+        <p id="2"></p>
+
+        <script>
+            function myFunction2() {
+                var x = document.getElementById("Text").value;
+                var str = x;
+                var n = str.length;
+                document.getElementById("2").innerHTML = n;
+            }
+        </script>
+    </body>
+</html>
